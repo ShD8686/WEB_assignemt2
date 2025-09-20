@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<head>
+  <title>Student Grades & Feedback Form</title>
+  <style>
+    /* Header */
+    #page-heading {
+      text-align: center;
+      font-size: 28px;
+      color: darkblue;
+      margin-bottom: 20px;
+    }
+
+    /* TAble styles */
+    table {
+      width: 70%;
+      margin: 0 auto;
+      border-collapse: collapse; /* removes double borders */
+    }
+
+    th {
+      background-color: lightblue; /* header background */
+      padding: 10px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    td {
+      padding: 8px;
+      border: 1px solid black;
+      text-align: center; /* text alignment */
+    }
+
+    /* Alternating lines */
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+
+    /* Highlighting */
+    .highlight-row {
+      background-color: lightgreen;
+    }
+
+    /* Form styles */
+    .form-container {
+      width: 400px;
+      margin: 40px auto;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px; /* rounded corners */
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: darkgreen;
+    }
+
+    label {
+      display: block;
+      font-weight: bold; /* heavy text */
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    /* Submit button */
+    #submit-btn {
+      background-color: darkblue;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #submit-btn:hover {
+      background-color: navy;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Title of the page -->
+  <h1 id="page-heading">Student Grades Table</h1>
+
+  <!-- Table -->
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Subject</th>
+      <th>Grade</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Alice</td>
+      <td>Math</td>
+      <td>A</td>
+    </tr>
+    <tr class="highlight-row">
+      <td>Science</td>
+      <td>B+</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>History</td>
+      <td>A+</td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td>English</td>
+      <td>A-</td>
+    </tr>
+  </table>
+
+  <!-- Feedback Form -->
+  <div class="form-container">
+    <h2>Feedback Form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label>Role:</label>
+      <select id="role" name="role">
+        <option>Student</option>
+        <option>Teacher</option>
+        <option>Other</option>
+      </select>
+
+      <label>Do you like this page?</label>
+      <br>
+      <label>Yes</label>
+      <input type="radio" id="yes" name="like">
+      <label>No</label>
+      <input type="radio" id="no" name="like">
+
+      <label>Comments:</label>
+      <textarea rows="4"></textarea>
+
+      <button>Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
